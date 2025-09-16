@@ -58,6 +58,9 @@ public final class Reservation {
 
     private void validateNoOverlap(ReservationItem newItem) {
         for (ReservationItem existing : items) {
+            if (existing.screening() == newItem.screening()) {
+                continue;
+            }
             boolean overlaps = existing.screening().overlaps(newItem.screening());
             if (overlaps) {
                 throw new IllegalStateException("overlapping screenings not allowed");
