@@ -4,7 +4,8 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 /**
- * Half-open interval [start, end) for time overlap checks.
+ * 시간 구간을 나타내는 값 객체. 반개구간 [start, end) 표현을 사용합니다.
+ * - overlaps: 두 시간 구간이 겹치는지 판정 (end는 포함하지 않음)
  */
 public final class DateTimeInterval {
     private final LocalDateTime start;

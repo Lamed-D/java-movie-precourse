@@ -3,7 +3,12 @@ package com.example.movie.common;
 import java.util.Objects;
 
 /**
- * Immutable money representation using KRW (won) as long.
+ * 금액 표현 객체. 한국 원화(KRW)를 long 정수로 보관합니다.
+ * 불변(Immutable)으로 설계되어 금액 연산 시 항상 새 인스턴스를 반환합니다.
+ * - percentageOff: 비율 할인 적용 (예: 10% 할인)
+ * - applyPercent: 비율 금액 계산 (예: 총액의 5%를 계산)
+ * - minusWon: 정액 차감 (예: 2,000원 차감)
+ * 금액은 0원 미만으로 내려가지 않도록 방어합니다.
  */
 public final class Money {
     private final long amountWon;
