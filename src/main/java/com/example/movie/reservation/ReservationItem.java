@@ -4,6 +4,10 @@ import com.example.movie.movie.SeatGrade;
 import com.example.movie.schedule.Screening;
 import java.util.List;
 
+/**
+ * 예매 항목: 특정 상영에 대해 선택한 좌석들과 좌석 등급 목록.
+ * seats와 seatGrades는 동일한 크기여야 하며, 같은 인덱스끼리 매핑됩니다.
+ */
 public final class ReservationItem {
     private final Screening screening;
     private final List<SeatId> seats;

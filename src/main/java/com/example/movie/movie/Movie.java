@@ -3,6 +3,11 @@ package com.example.movie.movie;
 import java.time.Duration;
 import java.time.LocalDate;
 
+/**
+ * 영화 정보.
+ * - runningTime: 상영 길이
+ * - openDate ~ closeDate: 상영 가능 기간 (기간 내에서만 상영 허용)
+ */
 public final class Movie {
     private final String title;
     private final Duration runningTime;

@@ -9,6 +9,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 예매 집합. 여러 상영에 대한 예매 항목을 모아 관리합니다.
+ * 제약
+ * - 상영 시간 겹침 금지
+ * - 동일 상영 내 좌석 중복 예약 금지
+ * 금액 계산
+ * - 항목별 금액 합산 후 포인트 차감 → 결제수단 비율 할인 적용
+ */
 public final class Reservation {
     private final List<ReservationItem> items;
     private final Map<Screening, ReservedSeats> reservedByScreening;

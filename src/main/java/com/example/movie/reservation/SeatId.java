@@ -2,6 +2,9 @@ package com.example.movie.reservation;
 
 import java.util.Objects;
 
+/**
+ * 좌석 식별자. 행(알파벳 A-Z) + 열(양의 정수)로 구성됩니다. 예) A1, C3
+ */
 public final class SeatId {
     private final char row; // A-Z
     private final int column; // 1..n

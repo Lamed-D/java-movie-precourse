@@ -5,7 +5,9 @@ import com.example.movie.schedule.Screening;
 import java.time.LocalDate;
 
 /**
- * 무비데이: 매월 10, 20, 30일에 상영되는 영화 10% 할인.
+ * 무비데이 할인 정책.
+ * 매월 10일/20일/30일에 시작하는 상영에 비율(%) 할인을 적용합니다.
+ * 우선순위: 비율 할인(무비데이) → 정액 할인(시간)
  */
 public final class MovieDayPolicy implements DiscountPolicy {
     private final double percent;

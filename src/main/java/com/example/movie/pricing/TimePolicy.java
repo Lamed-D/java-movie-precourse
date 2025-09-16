@@ -5,7 +5,9 @@ import com.example.movie.schedule.Screening;
 import java.time.LocalTime;
 
 /**
- * 시간 조건: 오전 11시 이전 또는 오후 8시(20시) 이후 시작 상영은 2,000원 할인.
+ * 시간 조건 할인 정책.
+ * 시작 시각이 11:00 이전이거나 20:00 이후(이상)면 정액(원) 할인을 적용합니다.
+ * 무비데이(비율) 할인 다음에 적용되어야 합니다.
  */
 public final class TimePolicy implements DiscountPolicy {
     private final long flatOffWon;

@@ -7,7 +7,9 @@ import com.example.movie.schedule.Screening;
 import java.util.List;
 
 /**
- * 합계 → 무비데이(비율) → 시간(정액) → 포인트 → 결제수단(비율) 순서 적용.
+ * 총액 계산기.
+ * 적용 순서: 좌석 합계 → 무비데이(비율) → 시간(정액) → 포인트 → 결제수단(비율)
+ * 각 단계는 0원 미만으로 내려가지 않도록 처리합니다.
  */
 public final class PriceCalculator {
     private final DiscountPolicy movieDayPolicy;
